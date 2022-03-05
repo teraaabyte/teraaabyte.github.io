@@ -1,0 +1,75 @@
+:root {
+	--white 		: rgb(238, 237, 222); /* Background */
+	--cream 		: rgb(224, 221, 170); /* Nav? */
+	--gray 			: rgb(32, 50, 57); /* footer ?*/
+	--dark-gray : rgb(20, 30, 39); /* font color ?*/
+	
+	--shadows-light  	: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+	--shadows-medium 	: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+	--shadow-hard 		: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+	
+	--font 	: 'Dm Serif Display';
+	--font-mono : 'Iosevka';
+}
+
+
+html, body {
+	margin: 0px;
+	background-color: var(--white);
+
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	height: 7vh;
+	background-color: var(--cream);
+	box-shadow: var(--shadows-light);
+}
+
+.navbar > * {
+	align-self: center;	
+	padding: 2px 16px;
+	font-family: var(--font-mono);
+	font-size: 2vh;
+
+}
+
+
+.d-grid{
+	display: grid;
+	grid-template-columns:  2.5fr ;
+	grid-template-rows: repeat(3, 100vh);
+	grid-auto-flow: column ;
+	grid-template-areas: 
+	"lsidebar"
+	"main"
+	"rsidebar";
+
+	grid-gap: 20px;
+	justify-content: space-between;
+	margin: 20px;
+}
+
+.lsidebar {
+	grid-area: lsidebar;
+	background-color: var(--cream);
+}
+
+.main {
+	grid-area: main;
+	background: var(--gray);
+}
+
+.rsidebar {
+	grid-area: rsidebar;
+	background: var(--dark-gray);
+
+}
+
+
+
+
+
+
+
