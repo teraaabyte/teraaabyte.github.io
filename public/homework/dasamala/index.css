@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 :root {
 	--white 		: rgb(238, 237, 222); /* Background */
 	--cream 		: rgb(224, 221, 170); /* Nav? */
@@ -6,16 +7,18 @@
 	
 	--shadows-light  	: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
 	--shadows-medium 	: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
-	--shadow-hard 		: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+	--shadows-hard 		: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
 	
 	--font 	: 'Dm Serif Display';
-	--font-mono : 'Iosevka';
-}
+	--font-mono : 'JetBrains Mono', monospace;
+	--font-size: 1.7vw;
 
+}
+	
 
 html, body {
 	margin: 0px;
-	background-color: var(--white);
+	background-color: var(--gray);
 
 }
 
@@ -23,47 +26,58 @@ html, body {
 	display: flex;
 	justify-content: space-between;
 	height: 7vh;
-	background-color: var(--cream);
-	box-shadow: var(--shadows-light);
+	width: 100%;
+	background-color: var(--dark-gray);
+	box-shadow: var(--shadows-hard);
+	position: fixed;
+	top: 0;
 }
 
 .navbar > * {
 	align-self: center;	
-	padding: 2px 16px;
+	padding: 2px 20px;
 	font-family: var(--font-mono);
-	font-size: 2vh;
+	font-size: var(--font-size);
+	color: var(--cream);
 
 }
 
 
+
 .d-grid{
 	display: grid;
-	grid-template-columns:  2.5fr ;
+	grid-template-columns: 1fr ;
 	grid-template-rows: repeat(3, 100vh);
-	grid-auto-flow: column ;
+	grid-auto-flow: column;
 	grid-template-areas: 
 	"lsidebar"
-	"main"
+	" main "
 	"rsidebar";
 
 	grid-gap: 20px;
 	justify-content: space-between;
 	margin: 20px;
+	padding: 7vh 0px ;
+
 }
+
+.d-grid > * {
+	border-radius: 10px;
+	background-color: var(--cream);
+	box-shadow: var(--shadows-hard);
+}
+
 
 .lsidebar {
 	grid-area: lsidebar;
-	background-color: var(--cream);
 }
 
 .main {
 	grid-area: main;
-	background: var(--gray);
 }
 
 .rsidebar {
 	grid-area: rsidebar;
-	background: var(--dark-gray);
 
 }
 
