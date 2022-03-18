@@ -23,8 +23,8 @@
 
 html, body {
 	margin: 0px;
-	background-color: var(--gray);
-
+	background-color: var(--dark-gray);
+	color: var(--cream);
 }
 
 .navbar {
@@ -51,78 +51,46 @@ html, body {
 }
 
 
+* {border: yellow dashed .5px;}
+
 img {
 	height: 20vw;
 }
 
-
-.d-grid{
-	display: grid;
-	grid-template-columns: 1fr ;
-	grid-template-rows: repeat(3, 100vh);
-	grid-auto-flow: column;
-	grid-template-areas: 
-	"lsidebar"
-	" main "
-	"rsidebar";
-
-	grid-gap: 20px;
-	justify-content: space-between;
-	margin: 20px;
-}
-
-.d-grid > * {
-	border-radius: 10px;
-	background-color: var(--cream);
-	box-shadow: var(--shadows-hard);
-	align-items: center;
-	padding: 10vh 0vh;
-}
-
-
-.top {
+figure {
 	display: flex;
-	grid-area: lsidebar;
-	align-items: center;
-	flex-direction: row-reverse;
 	justify-content: center;
-	  align-content: flex-start;
-	flex-wrap: wrap;
-	width: 100%;
-}
-
-
-.center {
-	grid-area: main;
-}
-
-.bottom {
-	grid-area: rsidebar;
 
 }
 
-.top > div {
-	flex-grow: 2;
-	padding: 2px 2vh;
-	max-width: 50vw;
-	font-family: var(--font-serif);
+.content {
+	display: block;
+}
+
+.content > * {
+	margin-top: 7vh ;
+	text-align: justify;
+	font-family: var(--font-mono);
+	line-height: 1.5em;
 }
 
 
 
+/* Mobile devices*/
 @media screen and (max-width: 600px) {
 	.navbar {
 		height: 7vh;
 	}
 	
-	.d-grid {
-		margin-top: 9vh;
-
+	.content > * {
+		margin-top: 3vh;
+		padding: 7vh 7vw;
 	}
-
-
+	
 }
 
+
+/* Larger Screens*/
 @media screen and (min-width: 601px) {
 	.navbar {
 		height: 5vw;
@@ -132,11 +100,11 @@ img {
 		font-size: 1.3vw;
 
 	}
-	.d-grid {
-		margin-top: 7vw;
+	.content > * {
+		margin-top: 7vh;
+		padding: 7vh 25vw;
 
 	}
-
 
 }
 
