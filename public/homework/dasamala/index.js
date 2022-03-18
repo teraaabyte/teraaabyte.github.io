@@ -53,3 +53,9 @@ var TxtType = function(el, toRotate, period) {
         css.innerHTML = ".typewrite > .wrap { border-right: 0.3em solid #e0ddaa}";
         document.body.appendChild(css);
     };
+
+
+function hehe() {
+	document.getElementById('hehe').style.transform="rotate(45deg)";
+
+}
