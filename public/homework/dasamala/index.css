@@ -60,6 +60,11 @@ img {
 	border-radius: var(--rounded-corners);
 }
 
+img:hover {
+	box-shadow: var(--shadows-hard);
+	border-radius: var(--rounded-corners);
+}
+
 figure {
 	display: flex;
 	justify-content: center;
@@ -74,8 +79,9 @@ figure {
 	margin-top: 7vh ;
 	text-align: justify;
 	font-family: var(--font-mono);
-	line-height: 1.5em;
+	line-height: 2em;
 }
+
 
 
 
