@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Montserrat&display=swap');
-
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 :root {
 	--white 		: rgb(238, 237, 222); /* Background */
 	--cream 		: rgb(224, 221, 170); /* Nav? */
@@ -16,18 +16,21 @@
 	--font-size:2.5vw;
 
 	--rounded-corners: 12px;
-
+	--heading1: 3vh;
+	--paragraph: 2vh;
 }
 
 
-
+/* {border: dashed yellow 0.2px;}
+*/
 html, body {
 	margin: 0px;
 	background-color: var(--dark-gray);
 	color: var(--cream);
 }
 
-.navbar {
+
+.c-navbar {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -43,7 +46,7 @@ html, body {
 	
 }
 
-.navbar > * {
+.c-navbar > * {
 	align-self: center;	
 	padding: 2px 20px;
 	font-family: var(--font-mono);
@@ -51,9 +54,8 @@ html, body {
 	color: var(--cream);
 }
 
-/*
-* {border: yellow dashed .5px;}
-*/
+
+
 img {
 	width: 100%;
 	box-shadow: var(--shadows-hard);
@@ -71,27 +73,75 @@ figure {
 
 }
 
-.content {
+.c-content {
 	display: block;
 }
 
-.content > * {
+.c-content > * {
 	margin-top: 7vh ;
-	text-align: justify;
 	font-family: var(--font-mono);
 	line-height: 2em;
 }
 
+.c-t-center {
+	text-align:center;
+	font-style: italic;
+
+}
+
+.c-responsive-h1 {
+	font-size: var(--heading1);
+}
 
 
+
+/* footer list*/
+ul {
+	list-style: none;
+	padding-inline: 0px;
+}
+ul > li {
+	margin: 5px 0px;
+	border-left:solid 3px var(--white);
+	padding-left: 10px;
+}
+
+
+.endcredits {
+	text-align: center;
+	color: var(--gray);
+}
+
+.socialmedia {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+a {
+	color: var(--gray);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--white);
+	 text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+
+}
 
 /* Mobile devices*/
 @media screen and (max-width: 600px) {
-	.navbar {
+	.c-navbar {
 		height: 7vh;
 	}
 	
-	.content > * {
+	.c-content > * {
 		margin-top: 3vh;
 		padding: 7vh 7vw;
 	}
@@ -101,15 +151,15 @@ figure {
 
 /* Larger Screens*/
 @media screen and (min-width: 601px) {
-	.navbar {
+	.c-navbar {
 		height: 5vw;
 	}
 
-	.navbar > * {
+	.c-navbar > * {
 		font-size: 1.3vw;
 
 	}
-	.content > * {
+	.c-content > * {
 		margin-top: 7vh;
 		padding: 7vh 25vw;
 
